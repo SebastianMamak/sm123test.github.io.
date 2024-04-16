@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<style>
+.button {
+  background-color: #04AA6D; /* Green */
+  width: 100%;
+  height: 100px;
+  font-size: 50px;
+}
+​
+</style>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <div>
+        <button name="submit" type="submit" value="FAIL" onclick="fail()" class="button">Fail</button>
+        <br><br>
+        <button name="submit" type="submit" value="SUCCESS" onclick="success()" class="button">Success</button>
+    </div>
+        <script>
+            function fail() {
+                window.location = 'pocgoldenpl://poc.golden.com/product?status=FAILED'
+            }
+            function success() {
+                window.location = 'pocgoldenpl://poc.golden.com/product?status=SUCCESSFUL'
+            }
+      </script>
+  </body>
+</html>
