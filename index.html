@@ -17,6 +17,12 @@
         <button name="submit" type="submit" value="FAIL" onclick="fail()" class="button">Fail</button>
         <br><br>
         <button name="submit" type="submit" value="SUCCESS" onclick="success()" class="button">Success</button>
+        <br><br>
+        <button name="submit" type="submit" value="UPDATE" onclick="update()" class="button">Update</button>
+        <br><br>
+        <button name="submit" type="submit" value="FAIL interface" onclick="failAndroid()" class="button">Fail interface</button>
+        <br><br>
+        <button name="submit" type="submit" value="SUCCESS interface" onclick="successAndroid()" class="button">Success interface</button>
     </div>
         <script>
             function fail() {
@@ -25,6 +31,16 @@
             function success() {
                 window.location = 'pocgoldenpl://poc.golden.com/product?status=SUCCESSFUL'
             }
+            function update() {
+                Android.updateHeader("New value")
+            }
+            function failAndroid() {
+                Android.failed()
+            }
+            function successAndroid() {
+                Android.succeed()
+            }
+          
       </script>
   </body>
 </html>
